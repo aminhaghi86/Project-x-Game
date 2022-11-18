@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Press Start 2P", cursive;
+  background: rgb(207, 204, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(207, 204, 255, 1) 20%,
+    rgba(168, 213, 232, 1) 50%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.background-clouds {
+  height: 100vh;
+}
+.container-angelcat {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60vh;
+  left: 20vw;
+  transform: translate(-50%, -50%);
+}
+.content-angelcat {
+  margin: 1rem;
+}
+
+.content-angelcat-chatbox {
+  background-color: white;
+  border-radius: 10px;
+  width: 250px;
+  height: 100px;
+}
+
+.chatbox-text {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.2rem;
+  margin: 0.4rem;
+}
+
+.content-title {
+  position: absolute;
+  top: 15vh;
+  left: 50vw;
+  color: rgb(255, 22, 22);
+  transform: translate(-50%, -50%);
+}
+.scoreboard-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+.scoreboard {
+  border: 2px solid red;
+  color: rgb(208, 54, 54);
+  background-color: black;
+  padding: 100px;
+  border-radius: 10px;
+}
+
+.scoreboard li {
+  padding: 0.5rem;
+}
+
+#top-candidate {
+  font-size: 1.2rem;
+  background-color: aliceblue;
+}
+
+.btn-playagain {
+  font-family: "Press Start 2P", cursive;
+  color: red;
+  margin: 1rem 5rem;
+  padding: 0.8rem;
+  border-color: red;
+  border-radius: 0.5rem;
+}
+
+.btn-playagain:hover {
+  font-family: "Press Start 2P", cursive;
+  color: rgb(255, 255, 255);
+  background-color: red;
+  transition: 0.5s;
+  margin: 1rem 5rem;
+  padding: 0.8rem;
+  border-color: red;
+  border-radius: 0.5rem;
+}
+
+.btn-playagain:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+
+.container-cat {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60vh;
+  left: 80vw;
+  transform: translate(-50%, -50%);
+}
+
+.content-cat-chatbox {
+  background-color: white;
+  border-radius: 10px;
+  width: 250px;
+  height: 100px;
+}
