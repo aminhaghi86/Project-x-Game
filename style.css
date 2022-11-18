@@ -6,6 +6,10 @@ body {
   box-sizing: border-box;
   font-family: "Press Start 2P", cursive;
 }
+
+body {
+  background-color: black;
+}
 .backdrop {
   background-color: grey;
   height: 100vh;
