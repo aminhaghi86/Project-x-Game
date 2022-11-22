@@ -28,6 +28,7 @@ document.getElementById("btnSave").onclick = async () => {
       username: username,
       email: email,
       created: Date.now(),
+      
     });
     usernameEl.value = "";
     emailEl.value = "";
