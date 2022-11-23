@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Project-X || Game</title>
-  </head>
-  <!-- overlay -->
-  <body>
-    <div class="backdrop">
-      <section class="overlay">
-        <div class="overlay-content">
-          <h2>enter a name</h2>
-          <form action="">
-            <input type="text" />
-            <button>click to submit</button>
-          </form>
-        </div>
-      </section>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Project-X || Game</title>
+    </head>
     <!-- overlay -->
-    <section class="container">
-      <img
-        class="background-img"
-        src="./images/officeBackhground.jpeg"
-        alt=""
-      />
-      <div class="cat-container">
-        <img class="cat-img" src="./images/maincat-inactive.png" alt="cat" />
-      </div>
-      <div class="boss-dog-container">
-        <img
-          class="bossdog-img"
-          src="./images/boss-dog__inactive.png"
-          alt="bossdog"
-        />
-      </div>
-    </section>
-    <div class="chat-box">
-      <p class="chatboxtext">Text Box</p>
-    </div>
-    <script src="./script.js"></script>
-  </body>
+    <body>
+        <div class="backdrop">
+            <section class="overlay">
+                <div class="overlay-content">
+                    <form id="userInfo">
+                        <label for="name">Enter Your Name</label>
+                        <input type="text" name="name" id="name" required />
+                        <button type="submit">click to submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!-- overlay -->
+        <section class="container">
+            <img
+                class="background-img"
+                src="./images/officeBackhground.jpeg"
+                alt=""
+            />
+            <div class="cat-container">
+                <img
+                    class="cat-img"
+                    src="./images/maincat-inactive.png"
+                    alt="cat"
+                />
+            </div>
+            <div class="boss-dog-container">
+                <img
+                    class="bossdog-img"
+                    src="./images/boss-dog__inactive.png"
+                    alt="bossdog"
+                />
+            </div>
+        </section>
+        <div class="chat-box">
+            <p class="chatboxtext">Text Box</p>
+        </div>
+        <script src="./script.js"></script>
+    </body>
 </html>

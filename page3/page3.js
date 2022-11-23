@@ -1,13 +1,41 @@
+"use strict";
+import {userInfoObj} from '../script'
+
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyASTKEqpfcsrVt-YYuvYgj-BrfEAFTeFwM",
+  authDomain: "project-xgame.firebaseapp.com",
+  projectId: "project-xgame",
+  storageBucket: "project-xgame.appspot.com",
+  messagingSenderId: "821288931646",
+  appId: "1:821288931646:web:03b2303116bdb09b501c6f",
+};
+
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+
+
 const questionH2 = document.getElementById("question");
 const catChatbox = document.getElementById("cat-chatbox");
 
 const answerButtons = document.querySelectorAll(".buttons");
 
-let counter = 0;
+let score = 0;
 //
-let counterEl = document.getElementById('scoreCouter');
+let scoreEl = document.getElementById('scoreCouter');
 //
 console.log(answerButtons);
+
+async function pushInfoToFirebase(score) {
+	await db.collection("userInfo").add({
+    	username: 'blackFridayYeah!!!',
+		score: score
+    });
+}
+
 
 const getData = async () => {
   const res = await fetch(
@@ -47,8 +75,8 @@ const changeHTML = async () => {
         audiowin.pause();
       }, 500);
 
-      counter++;
-      counterEl.innerHTML =counter; 
+      score++;
+      scoreEl.innerHTML = score; 
       catChatbox.style.color = "green";
       catChatbox.innerHTML = `yes! i got it, it was <b>"${api.correctAnswer}"</b>`;
     } else if (e.target.innerHTML !== api.correctAnswer) {
@@ -59,7 +87,7 @@ const changeHTML = async () => {
       setTimeout(() => {
         audiolose.pause();
       }, 2000);
-      
+	  pushInfoToFirebase(score);
       catChatbox.style.color = "red";
       catChatbox.innerHTML = `Nooo, ${e.target.innerHTML} is incorrect!`;
     }
