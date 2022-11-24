@@ -9,6 +9,7 @@
   </head>
   <!-- overlay -->
   <body>
+    <audio src="/Game-Sounds/OpeningScene.mp3" id="openingAudio"></audio>
     <div class="backdrop">
       <section class="overlay">
         <div class="overlay-content">
@@ -28,6 +29,7 @@
         alt=""
       />
       <div class="cat-container">
+        <img class="smalldog" src="./images/dog-frame.png" alt="small dog" />
         <img class="cat-img" src="./images/maincat-inactive.png" alt="cat" />
       </div>
       <div class="boss-dog-container">
@@ -39,7 +41,9 @@
       </div>
     </section>
     <div class="chat-box">
-      <p class="chatboxtext">Text Box</p>
+      <div class="text">
+        <p id="p1"></p>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

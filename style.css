@@ -41,13 +41,63 @@ body {
   height: 100%;
 }
 
+.smalldog {
+  visibility: hidden;
+  width: 100px;
+  height: 100px;
+  left: 30vw;
+  position: relative;
+  animation-delay: 1s;
+  animation-name: dogfired;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  transition: 3s;
+}
+
+@keyframes dogfired {
+  0% {
+    visibility: visible;
+    left: 35vw;
+  }
+  40% {
+    left: 30vw;
+  }
+  50% {
+    left: 20vw;
+  }
+  75% {
+    left: 15vw;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
 .cat-container {
   width: 50%;
   z-index: 2;
 }
 .cat-img {
+  visibility: hidden;
   object-fit: cover;
+  position: relative;
+  animation-delay: 2s;
+  animation-name: catenters;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
+  transition: 3s;
 }
+@keyframes catenters {
+  0% {
+    visibility: visible;
+    left: -100vw;
+  }
+  100% {
+    visibility: visible;
+    left: 0px;
+  }
+}
+
 .boss-dog-container {
   width: 50%;
   z-index: 2;
@@ -57,16 +107,35 @@ body {
 }
 /*  */
 .chat-box {
+  color: white;
   height: 20vh;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
-.chatboxtext {
+
+.text {
   width: 50%;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 5px;
   margin: 0 auto;
   border: 3px solid white;
-  font-size: 2rem;
+  font-size: 1rem;
   color: white;
+}
+
+.text p {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+#p1 button {
+  font-size: 1rem;
+  margin: 0 2rem;
+  background-color: rgb(251, 251, 251);
+  padding: 1rem;
+}
+
+#p1 button:hover {
+  transition: 1s;
+  background-color: brown;
 }
