@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="page4.css" />
     <title>Heaven</title>
   </head>
-  <body>
+  <body onload="typeWriter()"> 
 <!-- start of scoreboard -->
     <section class="container">
       <h1 class="content-title">Top candidates</h1>
@@ -27,14 +27,14 @@
         <div class="container-angelcat">
         <img src="../images/angelcat.gif" class="content-angelcat"/>
         <div class="content-angelcat-chatbox">
-        <p id="angelcat-text" class="chatbox-text">Oh my young meowdawan, you did aMEOWzing but this time it was not enough. Would you like to try again?</p>
+        <p id="angelcatText" class="chatbox-text"></p>
         </div>
       </div>
     
         <div class="container-cat">
         <img src="../images/maincat-inactive.png" class="content-cat"/>
         <div class="content-cat-chatbox">
-          <p id="cat-text" class="chatbox-text">This is a CATastrophy! Please hire me! </p>
+          <p id="catText" class="chatbox-text"></p>
         </div>
       </div>
       </div>
@@ -42,5 +42,6 @@
     </section>
 <!-- background clouds-->
     <img src="../images/clouds.gif" class="background-clouds" />
+    <script src="./page4.js"></script>
   </body>
 </html>
