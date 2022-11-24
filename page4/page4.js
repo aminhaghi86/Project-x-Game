@@ -40,6 +40,8 @@ function typeWriter (){
     }
     catanswer.innerHTML= catSays;
     angelcatanswer.innerHTML = angelcatSays;
+
+    
     };
 
 
