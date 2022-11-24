@@ -1,19 +1,10 @@
-"use strict"
-// {"type": "module"}
-
-const userInfoForm = document.getElementById('userInfo');
-
-const userInfoObj = {}
-
-userInfoForm.onsubmit = function registerUserInfo(e) {
-    e.preventDefault();
-    const username = userInfoForm.elements.name.value;
-    const userInfo = {
-        username: username,
-        score: 0
-    };
-    userInfoObj = userInfo;
-    console.log(userInfoObj);
-}
-
-export {userInfoObj}
+"use strict";
+let arrayUser = [];
+const form = document.getElementById("userInfo");
+//localStorage.getItem("UserName");
+form.onsubmit = function (e) {
+  const inputName = document.getElementById("name").value;
+  e.preventDefault();
+  arrayUser.push(inputName);
+  localStorage.setItem("UserName", arrayUser);
+};
