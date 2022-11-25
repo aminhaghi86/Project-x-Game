@@ -1,6 +1,11 @@
 "use strict";
+import { increaseScore, setScore } from "../../store.js";
+import { goToDoors, goToScoreboard } from "../../navigation.js";
+
 //SOUNDS
-let playDJ = function(){document.getElementById("djAudio").play()}
+let playDJ = function () {
+  document.getElementById("djAudio").play();
+};
 
 function green() {
   document.getElementById("p").style.color = "green";
@@ -21,6 +26,7 @@ function bisque() {
 const form = document.getElementById("guessForm");
 const errorMessage = document.getElementById("errorMessage");
 const successMessage = document.getElementById("successMessage");
+let counter = 10;
 
 let number = Math.floor(Math.random() * 41);
 
@@ -30,12 +36,25 @@ form.onsubmit = function (event) {
   let guess = Number(form.elements.guess.value);
   form.elements.guess.value = "";
   if (guess < number) {
-    showErrorMessage("Too low :(");
+    counter--;
+    console.log(counter);
+
+    showErrorMessage(`Too low :(, you have ${counter} guesses left`);
   } else if (guess > number) {
-    showErrorMessage("Too high :(");
+    console.log(counter);
+    counter--;
+    showErrorMessage(`Too high :(, you have ${counter} guesses left`);
   } else if (guess === number) {
     successMessage.innerHTML = "nice, you are right!🔑";
     errorMessage.innerHTML = "";
+    goToDoors();
+    increaseScore();
+  }
+  if (counter === 0) {
+    showErrorMessage("You Lose! :(");
+    setTimeout(() => {
+      goToScoreboard();
+    }, 1500);
   }
 };
 

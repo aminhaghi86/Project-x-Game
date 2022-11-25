@@ -1,3 +1,5 @@
+import { setScore, getScore } from "../../store.js";
+
 const doors = document.querySelectorAll(".doors");
 const backdrop = document.getElementById("backdrop");
 const doorSound = document.getElementById("door-sound");
@@ -22,7 +24,7 @@ doors.forEach((door) => {
 // door opening sound
 
 const falseDoor = () => {
-  selectDoor = doors[randomNum];
+  const selectDoor = doors[randomNum];
   console.log(selectDoor);
   selectDoor.src = `../images/door-stage-2.png`;
   selectDoor.onclick = () => {
@@ -37,5 +39,5 @@ const falseDoor = () => {
 falseDoor();
 
 exitGame.onclick = () => {
-  window.location.href = "../index.html";
+  window.location.href = "../page4/page4.html";
 };

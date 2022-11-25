@@ -1,5 +1,8 @@
 "use strict";
 
+import { increaseScore, getScore } from "../../store.js";
+import { goToDoors, goToScoreboard } from "../../navigation.js";
+
 const username = localStorage.getItem("UserName");
 console.log(localStorage.getItem("UserName"));
 
@@ -22,7 +25,7 @@ const catChatbox = document.getElementById("cat-chatbox");
 
 const answerButtons = document.querySelectorAll(".buttons");
 
-let score = 0;
+const score = getScore();
 //
 let scoreEl = document.getElementById("scoreCouter");
 //
@@ -73,8 +76,8 @@ const changeHTML = async () => {
       setTimeout(() => {
         audiowin.pause();
       }, 500);
-
-      score++;
+      goToDoors();
+      increaseScore();
       scoreEl.innerHTML = score;
       catChatbox.style.color = "green";
       catChatbox.innerHTML = `yes! i got it, it was <b>"${api.correctAnswer}"</b>`;
@@ -85,7 +88,9 @@ const changeHTML = async () => {
       }, 100);
       setTimeout(() => {
         audiolose.pause();
+        goToScoreboard();
       }, 1500);
+
       pushInfoToFirebase(score);
       catChatbox.style.color = "red";
       catChatbox.innerHTML = `Nooo, ${e.target.innerHTML} is incorrect!`;
