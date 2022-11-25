@@ -77,6 +77,17 @@ body {
   width: 50%;
   z-index: 2;
 }
+
+#catPicture {
+  visibility: hidden;
+  position: absolute;
+  left: 7.5rem;
+}
+
+#catPicture.visible {
+  visibility: visible;
+}
+
 .cat-img {
   visibility: hidden;
   object-fit: cover;
@@ -106,15 +117,21 @@ body {
   object-fit: cover;
 }
 /*  */
-.chat-box {
+#chatBox {
+  background-color: black;
+  width: 100vh;
+  margin-top: -1rem;
   color: white;
   height: 20vh;
   padding: 1rem;
   text-align: center;
 }
 
-.text {
-  width: 50%;
+#chatBoxText {
+  visibility: hidden;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  width: 100%;
   padding: 2rem;
   border-radius: 5px;
   margin: 0 auto;
@@ -123,19 +140,34 @@ body {
   color: white;
 }
 
-.text p {
-  font-size: 1rem;
-  padding: 1rem;
+#chatBoxText.visible {
+  visibility: visible;
 }
 
-#p1 button {
+.chatBox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#chatBoxBtns {
+  display: none;
+}
+
+#chatBoxBtns.display {
+  display: flex;
+  justify-content: space-around;
+}
+
+#chatBoxBtns button {
   font-size: 1rem;
-  margin: 0 2rem;
+  position: relative;
   background-color: rgb(251, 251, 251);
-  padding: 1rem;
+  top: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
-#p1 button:hover {
-  transition: 1s;
+#chatBoxBtns button:hover {
+  transition: 0.2s;
   background-color: brown;
 }
