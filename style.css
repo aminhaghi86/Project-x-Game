@@ -10,7 +10,7 @@ body {
 body {
   background-color: black;
 }
-/* .backdrop {
+.backdrop {
   background-color: grey;
   height: 100vh;
   display: flex;
@@ -20,7 +20,7 @@ body {
 .overlay-content {
   background-color: white;
   padding: 4rem;
-} */
+}
 
 .container {
   display: flex;

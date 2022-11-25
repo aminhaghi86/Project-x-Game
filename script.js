@@ -1,19 +1,27 @@
-// "use strict";
-// let arrayUser = [];
-// const form = document.getElementById("userInfo");
-// //localStorage.getItem("UserName");
-// form.onsubmit = function (e) {
-//   const inputName = document.getElementById("name").value;
-//   e.preventDefault();
-//   arrayUser.push(inputName);
-//   localStorage.setItem("UserName", arrayUser);
-// };
+"use strict";
+let arrayUser = [];
+const form = document.getElementById("userInfo");
+
+form.onsubmit = function (e) {
+  e.preventDefault();
+
+  //
+  const backDropEl = document.getElementById("backdrop");
+
+  setTimeout(() => {
+    backDropEl.style.display = "none";
+  }, 500);
+
+  const inputName = document.getElementById("name").value;
+  arrayUser.push(inputName);
+  localStorage.setItem("UserName", arrayUser);
+};
 
 // AUDIO play OnLoad or OnClick
-window.addEventListener("load",function(){
-  var player1 = document.getElementById("player");
-  player1.play();
- })
+// window.addEventListener("load",function(){
+//   var player1 = document.getElementById("player");
+//   player1.play();
+//  })
 
 //TEXT in chatbox appears
 function timedText() {
