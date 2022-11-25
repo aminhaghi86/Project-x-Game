@@ -28,8 +28,7 @@ h2 {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   padding: 1rem;
 }
 
@@ -44,10 +43,6 @@ h2 {
   width: 50px;
 }
 
-.header-container .timer {
-  color: white;
-}
-
 .dog-img {
   width: 70px;
   height: 70px;
@@ -55,12 +50,12 @@ h2 {
 
 .question {
   display: flex;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   align-items: center;
   justify-content: center;
   border: 3px dashed white;
   border-radius: 5px;
-  gap:1rem;
+  gap: 1rem;
 }
 
 .dog-img-container {
@@ -96,7 +91,6 @@ button {
   height: 30px;
 }
 .cat-img-container {
- 
   width: 100%;
   display: flex;
   align-items: center;
@@ -104,7 +98,7 @@ button {
 }
 .cat-img-container .cat {
   width: 30%;
-  height: 6rem;
+  height: 10rem;
   object-fit: contain;
 }
 
@@ -120,6 +114,6 @@ button {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  margin:0 .5rem;
-  font-size: .65rem;
+  margin: 0 0.5rem;
+  font-size: 0.65rem;
 }
