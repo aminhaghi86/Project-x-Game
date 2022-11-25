@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./page2.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./page2.css" />
     <title>page2</title>
-</head>
-<body>   
-        <div class="content-doors">
-            <img class="torch" src="../images/Torch_Gif.gif" alt="">
-            <img src="../images/door-1.png" id="door-one"></img>
-            <img src="../images/door-2.png" id="door-two"></img>
-            <img src="../images/door-3.png" id="door-three"></img>
-            <img class="torch" src="../images/Torch_Gif.gif" alt="">
+  </head>
+  <body>
+    <main id="wrong-answer" class="container-wrong-answer inactive">
+      <section class="wrong-answer">
+        <div class="info-div__header">
+          <h2>oh noes!</h2>
         </div>
-        <div class="cat-img-container">
-            <img src="../images/maincat-inactive.png" class="cat">
-        </div>
-        <div class="chatbox">
-            <p class="chatbox-text">I guess I should pick a door??</p>
-        </div>
-  
-        
-       
-</body>
+        <p>
+          Thats the wrong door, try the closed door, u always want to go on your
+          own way ;)
+        </p>
+        <button id="exit-game">End Game!</button>
+      </section>
+    </main>
+    <section id="backdrop" class="backdrop inactive"></section>
+    <div id="content-doors" class="content-doors">
+      <audio id="door-sound" src="../Game-Sounds/door opening.mp3"></audio>
+      <img class="torch" src="../images/Torch_Gif.gif" alt="" />
+      <img class="doors" src="../images/door-1.png" id="door-one" />
+      <img class="doors" src="../images/door-1.png" id="door-two" />
+      <img class="doors" src="../images/door-1.png" id="door-three" />
+      <img class="torch" src="../images/Torch_Gif.gif" alt="" />
+    </div>
+    <div class="cat-img-container">
+      <img src="../images/maincat-inactive.png" class="cat" />
+    </div>
+    <div class="chatbox">
+      <p class="chatbox-text">I guess I should pick a door??</p>
+    </div>
+    <script src="./page2.js"></script>
+  </body>
 </html>
