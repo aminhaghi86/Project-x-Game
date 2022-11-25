@@ -21,13 +21,14 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   gap: 1rem;
 }
 .overlay-content h2 {
   text-align: center;
   font-size: 2rem;
   padding: 1rem;
+  letter-spacing: 4px;
 }
 .form {
   display: flex;
@@ -38,8 +39,14 @@ body {
   width: 90%;
   margin: 0 auto;
   padding: 1rem 2rem;
-  border-radius: .5rem;
-  font-style: 3rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border: 3px solid rgb(0, 0, 0);
+  transition: all 1s ease;
+}
+.form input:focus {
+  outline: none;
+  background-color: #3db5eb;
 }
 .form button {
   width: 100%;
@@ -48,8 +55,7 @@ body {
   background-color: RED;
   border: none;
   letter-spacing: 4px;
-  transition: all .5s ease;
-
+  transition: all 0.5s ease;
 }
 .form button:hover {
   font-size: 1.2rem;
