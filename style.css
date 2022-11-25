@@ -10,25 +10,24 @@ body {
 body {
   background-color: black;
 }
-.backdrop {
+/* .backdrop {
   background-color: grey;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .overlay-content {
   background-color: white;
   padding: 4rem;
-}
+} */
 
 .container {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   background-color: rgb(0, 0, 0);
-  height: 80vh;
+  height: 70vh;
   width: 75vw;
   margin: 0 auto;
   background-position: center;
@@ -41,13 +40,85 @@ body {
   height: 100%;
 }
 
+.smalldog {
+  visibility: hidden;
+  width: 100px;
+  height: 100px;
+  left: 30vw;
+  position: relative;
+  animation-delay: 1s;
+  animation-name: dogfired;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  transition: 3s;
+}
+
+@keyframes dogfired {
+  0% {
+    visibility: visible;
+    left: 35vw;
+  }
+  40% {
+    left: 30vw;
+  }
+  50% {
+    left: 20vw;
+  }
+  75% {
+    left: 15vw;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
 .cat-container {
   width: 50%;
   z-index: 2;
 }
-.cat-img {
-  object-fit: cover;
+
+#catPicture {
+  visibility: hidden;
+  position: absolute;
+  left: 7.5rem;
 }
+
+#catPicture.visible {
+  visibility: visible;
+}
+
+.cat-img {
+  visibility: hidden;
+  object-fit: cover;
+  position: relative;
+  animation-delay: 2s;
+  animation-name: catenters;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
+  transition: 3s;
+}
+@keyframes catenters {
+  0% {
+    visibility: visible;
+    left: -100vw;
+  }
+  100% {
+    visibility: visible;
+    left: 0px;
+  }
+}
+
+#bossChatbox {
+  display: none;
+  line-height: 1.5rem;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 80%;
+}
+
 .boss-dog-container {
   width: 50%;
   z-index: 2;
@@ -56,17 +127,57 @@ body {
   object-fit: cover;
 }
 /*  */
-.chat-box {
+#chatBox {
+  background-color: black;
+  width: 100vh;
+  margin-top: 1rem;
+  color: white;
   height: 20vh;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
-.chatboxtext {
-  width: 50%;
-  padding: 1rem;
+
+#chatBoxText {
+  visibility: hidden;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  width: 100%;
+  padding: 2rem;
   border-radius: 5px;
   margin: 0 auto;
   border: 3px solid white;
-  font-size: 2rem;
+  font-size: 1rem;
   color: white;
+}
+
+#chatBoxText.visible {
+  visibility: visible;
+}
+
+.chatBox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#chatBoxBtns {
+  display: none;
+}
+
+#chatBoxBtns.display {
+  display: flex;
+  justify-content: space-around;
+}
+
+#chatBoxBtns button {
+  font-size: 1rem;
+  position: relative;
+  background-color: rgb(251, 251, 251);
+  top: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+#chatBoxBtns button:hover {
+  transition: 0.2s;
+  background-color: brown;
 }
