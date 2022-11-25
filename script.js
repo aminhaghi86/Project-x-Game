@@ -14,3 +14,23 @@ function timedText() {
 
 }
 timedText();
+
+//CAT APPEARS
+let catPicture = document.getElementById("bland-html-element");
+
+window.setTimeout(function() {
+    element.classList.add("flashy-design");
+}, 2000);
+
+// hide after 3 seconds
+window.setTimeout(function() {
+    element.classList.remove("flashy-design");
+}, 3000);
+
+//_____YES/NO DIV APPEARS
+let nextPage = document.getElementById("bland-html-element");
+
+window.setTimeout(function() {
+    element.classList.add("flashy-design");
+}, 2000);
+
