@@ -36,6 +36,10 @@ body {
   height: 100px;
 }
 
+.content-cat {
+  transform: rotateY(180deg);
+}
+
 .chatbox-text {
   font-size: 0.8rem;
   text-align: center;
