@@ -2,6 +2,7 @@
 import { setName, setScore } from "../store.js";
 
 const form = document.getElementById("userInfo");
+const noBtn = document.getElementById("noBtn");
 
 form.onsubmit = function (e) {
   e.preventDefault();
@@ -72,13 +73,12 @@ function revealBossChatbox() {
     document.getElementById("audioNo").play();
   };
   playNo();
-  var x = document.getElementById("bossChatbox");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+  let x = document.getElementById("bossChatbox");
+  x.classList.remove("inactive");
 }
+noBtn.onclick = () => {
+  revealBossChatbox();
+};
 
 // YES-btn-audio
 let playYes = function () {
