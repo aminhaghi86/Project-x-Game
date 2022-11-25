@@ -8,32 +8,27 @@
     <title>Document</title>
   </head>
   <body>
+    <header><audio id="djAudio" src="../game1/audio/Highway to Helena 8-bit.mp3"></audio>
+      <div onclick="playDJ()" id="djAudio" class="audioContainer">
+        <img class="imgAudio" src="../game1/images/djcool.gif" />
+        <div class="audioContainer-chat">
+          <p>EEyyYo! Click me to hear some sick tunes!</p>
+        </div>
+      </header>
     <main>
       <div class="content">
         <h1 class="title">GUESS A NUMBER</h1>
-        <p class="red-and-blue" id="p">
-          <u>WELCOME TO MY NUMBER GAME! LETS TRY IT!</u> 😄<br /><br />
-          The game works in such a way that you can guess a maximum of 10 times
-          and you have between the numbers 0 - 40 to guess in between. You can
-          cancel the game at any time if you don't like it. <br />GOOD LUCK!
-        </p>
-        <h2>
-          PS.. press the two buttons under to see something cool 😎 or be a
-          bug..🪰
-        </h2>
-        <div class="color-btn">
-          <br />
-          <button style="background-color: green" onclick="green()">
-            Green
-          </button>
-          <button style="background-color: red" onclick="red()">Red</button>
-          <button style="background-color: orange" onclick="orange()">
-            Orange
-          </button>
-          <button style="background-color: bisque" onclick="bisque()">
-            Bisque
-          </button>
+        <h2>THE RULES ARE SIMPLE:</h2>
+        <div class="red-and-blue" id="p">
+          <ul>
+            <li>Maximum 10 guesses</li>
+            <li>Guess between the numbers 0 - 40</li>
+            <li>You only have to be right once!</li>
+          </ul>
+          <h3>Good luck!</h3>
         </div>
+      </main>
+      <div class="makeGuess-container">
         <form class="guess-form" id="guessForm">
           <input
             type="text"
@@ -44,9 +39,29 @@
           <button type="submit" class="guess-button">Guess</button>
         </form>
       </div>
+      <div class="result-container">
       <div class="error-message" id="errorMessage"></div>
       <div class="success-message" id="successMessage"></div>
-      <script src="script.js"></script>
-    </main>
+      </div>
+
+      <div class="styling-options">
+      <div class="color-btn">
+        <br />
+        <button style="background-color: green" onclick="green()">
+          Green
+        </button>
+        <button style="background-color: red" onclick="red()">Red</button>
+        <button style="background-color: orange" onclick="orange()">
+          Orange
+        </button>
+        <button style="background-color: bisque" onclick="bisque()">
+          Bisque
+        </button>
+      </div>
+      </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
+
+<!-- < -->

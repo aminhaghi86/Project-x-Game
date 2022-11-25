@@ -1,4 +1,6 @@
 "use strict";
+//SOUNDS
+let playDJ = function(){document.getElementById("djAudio").play()}
 
 function green() {
   document.getElementById("p").style.color = "green";

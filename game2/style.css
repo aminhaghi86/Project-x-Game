@@ -1,65 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+.audioContainer {
+  position: fixed;
+  top: 0px;
+  left: 10vw;
+  width: 40%;
+}
+
+.audioContainer-chat {
+  border-radius: 10px;
+  width: 10rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: azure;
+  color: #3e051c;
+  font-size: 0.8rem;
+}
+
+.imgAudio {
+  width: 10rem;
 }
 
 body {
-  background-image: url(./bilder/Number-Rain.gif);
+  background-image: url(./bilder/radial\ background.gif);
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
 }
 
 .content {
-  margin-top: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(110, 57, 57);
+  margin-top: 3rem;
+  border-top: groove goldenrod 10px;
 }
 
 .title {
-  margin-bottom: 2rem;
+  color: rgb(81, 7, 7);
+  width: 50%;
+  border-radius: 20px;
+  padding: 1rem;
+  background-color: rgb(249, 249, 32);
   text-align: center;
+  margin-top: 1rem;
+  border: groove yellow 10px;
+  z-index: 2;
+}
+
+.content h2 {
+  color: rgb(244, 244, 157);
+  border: groove rgb(191, 191, 60) 7px;
+  background-color: #750d37;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 1rem;
+  line-height: 1.5rem;
+  margin: -1rem 1rem;
+  z-index: 1;
 }
 
 .red-and-blue {
-  box-sizing: border-box;
+  background-color: #3e051c;
+  width: 40%;
+  padding: 4rem;
   font-weight: bold;
-  border: solid 1px white;
-  padding: 10px;
-  text-align: center;
-  background-color: #750d37;
-  margin-right: 32.5%;
-  margin-left: 32.5%;
-  color: black;
+  border: dotted yellow 4px;
+  animation: borderblinker 1s linear infinite;
 }
 
-h2 {
-  color: white;
-  font-size: 25px;
-  text-decoration: underline red;
+@keyframes borderblinker {
+  50% {
+    border: dotted yellow 5px;
+  }
+}
+
+.red-and-blue li {
+  line-height: 2rem;
+  color: rgb(244, 244, 157);
+}
+
+.red-and-blue h3 {
+  margin-top: 2rem;
   text-align: center;
-  margin-top: 1rem;
+}
+
+.makeGuess-container {
+  padding: 2rem;
+  background-color: #66032b;
+  width: 100%;
 }
 
 .color-btn {
+  position: relative;
+  background-color: #3e051c;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  margin-top: 5rem;
+  padding: 0.5rem 2rem;
+  border: outset goldenrod 10px;
 }
 
 .color-btn button {
   cursor: pointer;
-  border-color: rgb(72, 231, 239);
+  border: outset goldenrod 10px;
+  border-color: rgb(239, 236, 72);
   font-size: 22px;
+  margin: 1rem;
+  padding: 0.5rem;
 }
 
 .guess-form {
   text-align: center;
 }
 
+.guess-button {
+  border: ridge goldenrod 10px;
+  border-radius: 20px;
+  color: goldenrod;
+  padding: 1rem;
+  background-color: #3e051c;
+}
+
 .submit-button {
-  font-size: 30px;
-  border: red solid 2px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: red groove 10px;
+  border-radius: 15px;
 }
 
 .guess-form button {
@@ -67,10 +145,17 @@ h2 {
   cursor: pointer;
 }
 
+.result-container {
+  padding: 2rem;
+  background-color: #3e051c;
+  text-align: center;
+  height: 10rem;
+  border-bottom: groove goldenrod 10px;
+}
+
 .success-message {
   font-size: 60px;
-  color: yellow;
-  text-align: center;
+  color: rgb(0, 255, 8);
   font-weight: bold;
   margin-top: 1rem;
 }
