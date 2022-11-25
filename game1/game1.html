@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <audio id="djAudio" src="./audio/Highway to Helena 8-bit.mp3"></audio>
+      <div onclick="playDJ()" id="djAudio" class="audioContainer">
+        <img class="imgAudio" src="./images/djcool.gif" />
+        <div class="audioContainer-chat">
+          <p>EEyyYo! Click me to hear some sick tunes!</p>
+        </div>
+      </div>
+      <div class="header-container">
+        <h1>Cat <span>vs</span> Mouse <span>vs</span> Dog!</h1>
+        <article class="rules">
+          <h2>
+            The rules are simple:<br />
+
+            <br /><span>DOG</span> wins over <span>CAT</span> <br /><span
+              >CAT</span
+            >
+            wins over <span>MOUSE</span><br /><span>MOUSE</span> wins over
+            <span>DOG</span> <br /><br />
+          </h2>
+          <h3>
+            It's you vs another candidate.<br />
+            Best out of 3
+          </h3>
+        </article>
+      </div>
+    </header>
+    <section class="container">
+      <br />
+      <div class="titlesContainer">
+        <h1 class="gameText" id="playerText"></h1>
+        <h1 class="gameText" id="computerText"><br /></h1>
+      </div>
+      <h1 class="gameText" id="resultText">Place your bet!</h1>
+
+      <div class="gameDiv">
+        <div class="buttonContainer">
+          <img src="./images/dog.png" />
+          <button onclick="playDog()" class="choiceBtn">DOG</button>
+          <audio id="dogAudio" src="./audio/dogsound.mp3"></audio>
+        </div>
+        <div class="buttonContainer">
+          <img src="./images/cat.png" />
+          <button onclick="playCat()" class="choiceBtn">CAT</button>
+          <audio id="catAudio" src="./audio/catsound.mp3"></audio>
+        </div>
+        <div class="buttonContainer">
+          <img src="./images/mouse.png" />
+          <button onclick="playMouse()" class="choiceBtn">MOUSE</button>
+          <audio id="mouseAudio" src="./audio/mousesound.wav"></audio>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

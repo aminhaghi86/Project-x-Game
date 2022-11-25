@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./bilder/Number-Rain.gif);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+  margin-top: 5%;
+}
+
+.title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.red-and-blue {
+  box-sizing: border-box;
+  font-weight: bold;
+  border: solid 1px white;
+  padding: 10px;
+  text-align: center;
+  background-color: #750d37;
+  margin-right: 32.5%;
+  margin-left: 32.5%;
+  color: black;
+}
+
+h2 {
+  color: white;
+  font-size: 25px;
+  text-decoration: underline red;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.color-btn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.color-btn button {
+  cursor: pointer;
+  border-color: rgb(72, 231, 239);
+  font-size: 22px;
+}
+
+.guess-form {
+  text-align: center;
+}
+
+.submit-button {
+  font-size: 30px;
+  border: red solid 2px;
+}
+
+.guess-form button {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.success-message {
+  font-size: 60px;
+  color: yellow;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.error-message {
+  font-size: 30px;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
