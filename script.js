@@ -1,7 +1,8 @@
 // AUDIO play OnLoad or OnClick
-window.onload=function () {
-    document.getElementById("openingAudio").play();
-}
+window.addEventListener("load",function(){
+    var player1 = document.getElementById("player");
+    player1.play();
+   })
 
 //TEXT in chatbox appears
 function timedText() {
@@ -37,8 +38,10 @@ window.setTimeout(function() {
     chatBox.classList.add("visible");
 }, 1000);
 
-// NO-btn reveals 'Believe in yourself' Div
+// NO-btn reveals 'Believe in yourself' Div and plays noBtn-Audio
 function revealBossChatbox() {
+    let playNo = function(){document.getElementById("audioNo").play()}
+    playNo();
     var x = document.getElementById("bossChatbox");
     if (x.style.display === "none") {
       x.style.display = "block";
@@ -46,3 +49,6 @@ function revealBossChatbox() {
       x.style.display = "none";
     }
   }
+
+// YES-btn-audio
+let playYes = function(){document.getElementById("audioYes").play()}

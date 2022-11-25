@@ -9,7 +9,11 @@
   </head>
   <!-- overlay -->
   <body>
-    <audio src="/Game-Sounds/OpeningScene.mp3" id="openingAudio"></audio>
+    <audio
+      id="player"
+      src="Game-Sounds/OpeningScene.mp3"
+      type="audio/mp3"
+    ></audio>
     <!-- <div class="backdrop">
       <section class="overlay">
         <div class="overlay-content">
@@ -30,7 +34,7 @@
       />
       <div class="cat-container">
         <img id="catPicture" src="./images/maincat-inactive.png" alt="cat" />
-        <img class="smalldog" src="./images/dog-frame.png" alt="small dog" />
+        <img class="smalldog" src="./images/sadDog.png" alt="small dog" />
         <img class="cat-img" src="./images/maincat-inactive.png" alt="cat" />
       </div>
       <div class="boss-dog-container">
@@ -53,8 +57,13 @@
         <div id="chatBoxText">
           <p id="p1"></p>
           <div id="chatBoxBtns">
-            <button id="yesBtn">Yes</button>
+            <button onclick="playYes()" id="yesBtn">Yes</button>
+            <audio
+              id="audioYes"
+              src="Game-Sounds/Positive-correct-game-sound.wav"
+            ></audio>
             <button onclick="revealBossChatbox()" id="noBtn">No</button>
+            <audio id="audioNo" src="Game-Sounds/noBtn.wav"></audio>
           </div>
         </div>
       </div>
