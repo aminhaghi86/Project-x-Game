@@ -10,7 +10,7 @@
   <!-- overlay -->
   <body>
     <audio src="/Game-Sounds/OpeningScene.mp3" id="openingAudio"></audio>
-    <div class="backdrop">
+    <!-- <div class="backdrop">
       <section class="overlay">
         <div class="overlay-content">
           <h2>enter a name</h2>
@@ -20,7 +20,7 @@
           </form>
         </div>
       </section>
-    </div>
+    </div> -->
     <!-- overlay -->
     <section class="container">
       <img
@@ -34,6 +34,13 @@
         <img class="cat-img" src="./images/maincat-inactive.png" alt="cat" />
       </div>
       <div class="boss-dog-container">
+        <div id="bossChatbox">
+          <p>
+            Are you kitten me?!<br />
+            Believe in yourself!<br />
+            Say "yes"!
+          </p>
+        </div>
         <img
           class="bossdog-img"
           src="./images/boss-dog__inactive.png"
@@ -45,7 +52,10 @@
       <div id="chatBox">
         <div id="chatBoxText">
           <p id="p1"></p>
-          <div id="chatBoxBtns"><button>Yes</button><button>No</button></div>
+          <div id="chatBoxBtns">
+            <button id="yesBtn">Yes</button>
+            <button onclick="revealBossChatbox()" id="noBtn">No</button>
+          </div>
         </div>
       </div>
     </section>

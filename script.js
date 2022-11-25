@@ -36,3 +36,13 @@ let chatBox = document.getElementById("chatBoxText");
 window.setTimeout(function() {
     chatBox.classList.add("visible");
 }, 1000);
+
+// NO-btn reveals 'Believe in yourself' Div
+function revealBossChatbox() {
+    var x = document.getElementById("bossChatbox");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }

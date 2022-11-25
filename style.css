@@ -10,7 +10,7 @@ body {
 body {
   background-color: black;
 }
-.backdrop {
+/* .backdrop {
   background-color: grey;
   height: 100vh;
   display: flex;
@@ -21,14 +21,14 @@ body {
 .overlay-content {
   background-color: white;
   padding: 4rem;
-}
+} */
 
 .container {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   background-color: rgb(0, 0, 0);
-  height: 80vh;
+  height: 70vh;
   width: 75vw;
   margin: 0 auto;
   background-position: center;
@@ -109,6 +109,17 @@ body {
   }
 }
 
+#bossChatbox {
+  display: none;
+  line-height: 1.5rem;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 80%;
+}
+
 .boss-dog-container {
   width: 50%;
   z-index: 2;
@@ -120,7 +131,7 @@ body {
 #chatBox {
   background-color: black;
   width: 100vh;
-  margin-top: -1rem;
+  margin-top: 1rem;
   color: white;
   height: 20vh;
   padding: 1rem;
