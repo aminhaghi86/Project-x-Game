@@ -69,6 +69,24 @@ body {
     text-shadow: 2px 2px 0px #bb33c5;
   }
 }
+.content {
+  margin:1rem 0rem;
+ line-height: 2rem;
+}
+#exit-game{
+  transition: all 3s padding;
+  padding: .5rem;
+  border-radius: .5rem;
+  transition: all .56s ease-in;
+  border: none;
+}
+#exit-game:hover{
+  background-color: red;
+  color: white;
+  letter-spacing: 2px;
+  padding: .55rem;
+
+}
 
 .backdrop {
   position: fixed;

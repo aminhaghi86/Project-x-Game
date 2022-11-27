@@ -27,7 +27,6 @@ doors.forEach((door) => {
 
 const falseDoor = () => {
   const selectDoor = doors[randomNum];
-  console.log(selectDoor);
   selectDoor.src = `../images/door-stage-2.png`;
   selectDoor.onclick = () => {
     doorSound.play();
