@@ -79,6 +79,19 @@ body {
   z-index: 1;
   background: rgba(0, 0, 0, 0.75);
 }
+.doors-anim{
+  transform: perspective(300px) rotate(0deg);
+  animation:open 2s linear;
+}
+@keyframes open {
+  0%{
+    transform: perspective(300px) rotateY(0deg);
+  }
+ 
+  100%{
+    transform: perspective(300px) rotateY(90deg);
+  }
+}
 
 .content-doors {
   padding-top: 10rem;
