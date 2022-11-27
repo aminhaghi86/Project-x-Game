@@ -32,8 +32,9 @@ body {
 .content-angelcat-chatbox {
   background-color: white;
   border-radius: 10px;
-  width: 250px;
-  height: 100px;
+  width: 25vw;
+  padding: 1rem;
+  line-height: 1.3rem;
 }
 
 .content-cat {
@@ -44,7 +45,6 @@ body {
   font-size: 0.8rem;
   text-align: center;
   padding: 0.2rem;
-  margin: 0.4rem;
 }
 
 .content-title {
@@ -87,6 +87,7 @@ body {
   padding: 0.8rem;
   border-color: red;
   border-radius: 0.5rem;
+  transition: all .5s ease-in;
 }
 
 .btn-playagain:hover {
@@ -98,6 +99,8 @@ body {
   padding: 0.8rem;
   border-color: red;
   border-radius: 0.5rem;
+  transform: translateY(.2rem);
+  letter-spacing: 3px;
 }
 
 .btn-playagain:active {
@@ -117,6 +120,7 @@ body {
 .content-cat-chatbox {
   background-color: white;
   border-radius: 10px;
-  width: 250px;
-  height: 100px;
+  width: 20vw;
+  padding: 1rem 0rem;
+  line-height: 1.5rem;
 }
