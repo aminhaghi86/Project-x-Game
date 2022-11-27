@@ -7,7 +7,7 @@ const wrongAnswer = document.getElementById("wrong-answer");
 const exitGame = document.getElementById("exit-game");
 
 // variables
-let randomNum = Math.floor(Math.random() * 3);
+let randomNum = Math.floor(Math.random() * 2)+1;
 
 // variables
 
