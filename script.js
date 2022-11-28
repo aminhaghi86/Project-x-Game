@@ -11,7 +11,7 @@ form.onsubmit = function (e) {
   const backDropEl = document.getElementById("backdrop");
 
   setTimeout(() => {
-    window.location.href = "../0-overlay/overlay.html";
+    window.location.href = "../page1/page1.html";
   }, 500);
 
   const inputName = document.getElementById("name").value;
