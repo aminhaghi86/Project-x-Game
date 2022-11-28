@@ -69,6 +69,24 @@ body {
     text-shadow: 2px 2px 0px #bb33c5;
   }
 }
+.content {
+  margin:1rem 0rem;
+ line-height: 2rem;
+}
+#exit-game{
+  transition: all 3s padding;
+  padding: .5rem;
+  border-radius: .5rem;
+  transition: all .56s ease-in;
+  border: none;
+}
+#exit-game:hover{
+  background-color: red;
+  color: white;
+  letter-spacing: 2px;
+  padding: .55rem;
+
+}
 
 .backdrop {
   position: fixed;
@@ -78,6 +96,19 @@ body {
   height: 100vh;
   z-index: 1;
   background: rgba(0, 0, 0, 0.75);
+}
+.doors-anim{
+  transform: perspective(300px) rotate(0deg);
+  animation:open 2s linear;
+}
+@keyframes open {
+  0%{
+    transform: perspective(300px) rotateY(0deg);
+  }
+ 
+  100%{
+    transform: perspective(300px) rotateY(90deg);
+  }
 }
 
 .content-doors {
