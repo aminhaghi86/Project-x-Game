@@ -8,57 +8,53 @@
     <title>Number-game</title>
   </head>
   <body>
-    <header><audio id="djAudio" src="../game1/audio/Highway to Helena 8-bit.mp3"></audio>
-      <div onclick="playDJ()" id="djAudio" class="audioContainer">
+    <header>
+      <audio
+        id="djAudio"
+        src="../game1/audio/Highway to Helena 8-bit.mp3"
+      ></audio>
+      <div id="djBtn" class="audioContainer">
         <img class="imgAudio" src="../game1/images/djcool.gif" />
         <div class="audioContainer-chat">
           <p>EEyyYo! Click me to hear some sick tunes!</p>
         </div>
-      </header>
+      </div>
+    </header>
     <main>
       <div class="content">
         <h1 class="title">GUESS A NUMBER</h1>
         <h2>THE RULES ARE SIMPLE:</h2>
-        <div class="red-and-blue" id="p">
+        <div class="colors">
           <ul>
-            <li>Maximum 10 guesses</li>
-            <li>Guess between the numbers 0 - 40</li>
-            <li>You only have to be right once!</li>
+            <li class="changeColor">Maximum 10 guesses</li>
+            <li class="changeColor">Guess between the numbers 0 - 40</li>
+            <li class="changeColor">You only have to be right once!</li>
           </ul>
           <h3>Good luck!</h3>
         </div>
-      </main>
-      <div class="makeGuess-container">
-        <form class="guess-form" id="guessForm">
-          <input
-            type="text"
-            name="guess"
-            placeholder="Make a guess..."
-            class="submit-button"
-          />
-          <button type="submit" class="guess-button">Guess</button>
-        </form>
       </div>
-      <div class="result-container">
+    </main>
+    <div class="makeGuess-container">
+      <form class="guess-form" id="guessForm">
+        <input
+          type="text"
+          name="guess"
+          placeholder="Make a guess..."
+          class="submit-button"
+        />
+        <button type="submit" class="guess-button">Guess</button>
+      </form>
+    </div>
+    <div class="result-container">
       <div class="error-message" id="errorMessage"></div>
       <div class="success-message" id="successMessage"></div>
-      </div>
-
-      <div class="styling-options">
-      <div class="color-btn">
-        <br />
-        <button style="background-color: green" onclick="green()">
-          Green
-        </button>
-        <button style="background-color: red" onclick="red()">Red</button>
-        <button style="background-color: orange" onclick="orange()">
-          Orange
-        </button>
-        <button style="background-color: bisque" onclick="bisque()">
-          Bisque
-        </button>
-      </div>
-      </div>
+    </div>
+    <div class="cover-btn">
+      <button class="green-btn color-btn" id="green">Green</button>
+      <button class="red-btn color-btn" id="red">Red</button>
+      <button class="orange-btn color-btn" id="orange">Orange</button>
+      <button class="bisque-btn color-btn" id="bisque">Bisque</button>
+    </div>
 
     <script src="script.js" type="module"></script>
   </body>

@@ -1,27 +1,37 @@
 "use strict";
 import { increaseScore, setScore } from "../../store.js";
 import { goToDoors, goToScoreboard } from "../../navigation.js";
+const playDJ = document.getElementById("djBtn");
+const green = document.getElementById("green");
+const red = document.getElementById("red");
+const orange = document.getElementById("orange");
+const bisque = document.getElementById("bisque");
 
 //SOUNDS
-let playDJ = function () {
+playDJ.onclick = function () {
   document.getElementById("djAudio").play();
 };
 
-function green() {
-  document.getElementById("p").style.color = "green";
-}
-
-function red() {
-  document.getElementById("p").style.color = "red";
-}
-
-function orange() {
-  document.getElementById("p").style.color = "orange";
-}
-
-function bisque() {
-  document.getElementById("p").style.color = "bisque";
-}
+green.onclick = function () {
+  document.querySelectorAll(".changeColor").forEach((element) => {
+    element.style.color = "green";
+  });
+};
+red.onclick = function () {
+  document.querySelectorAll(".changeColor").forEach((element) => {
+    element.style.color = "red";
+  });
+};
+orange.onclick = function () {
+  document.querySelectorAll(".changeColor").forEach((element) => {
+    element.style.color = "orange";
+  });
+};
+bisque.onclick = function () {
+  document.querySelectorAll(".changeColor").forEach((element) => {
+    element.style.color = "bisque";
+  });
+};
 
 const form = document.getElementById("guessForm");
 const errorMessage = document.getElementById("errorMessage");

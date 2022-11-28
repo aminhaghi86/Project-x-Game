@@ -11,7 +11,8 @@ const firebaseConfig = {
 
 const list = document.querySelector(".scoreboard ol");
 const playerList = document.getElementById("scoreboard-player");
-const playBtn = document.getElementById("playAgain");
+const playBtn = document.getElementById("playAgainYes");
+const resetBtn = document.getElementById("playAgainNo");
 const app = firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
@@ -46,7 +47,7 @@ const renderPosts = (scores) => {
     const listEl = document.createElement("div");
     listEl.innerHTML = `
     Username: ${data.username}  <br>
-       Score: ${data.score}
+       Score: ${data.score}<br> <br>
       
 
     `;
@@ -54,11 +55,19 @@ const renderPosts = (scores) => {
   }
 
   const playerEl = document.createElement("div");
-  playerEl.innerHTML = `<h2 class="scoreboard-player">Score:${getName()} Username:${getScore()}</h2>`;
+
+  playerEl.innerHTML = `<h2 class="scoreboard-player">Username:${getName()}<br><br>Score:${getScore()}</h2>`;
   playerList.append(playerEl);
+  document.querySelector(".scoreboard-player").style.textAlign = "center";
 };
 
 playBtn.onclick = () => {
+  window.localStorage.removeItem("userName");
+  window.localStorage.removeItem("score");
+  window.location.href = "../page1/page1.html";
+};
+
+resetBtn.onclick = () => {
   window.localStorage.removeItem("userName");
   window.localStorage.removeItem("score");
   window.location.href = "../index.html";

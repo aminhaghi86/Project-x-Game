@@ -1,17 +1,25 @@
 import { increaseScore } from "../../store.js";
 import { goToDoors, goToScoreboard } from "../../navigation.js";
 
+const playDJ = document.getElementById("djBtn");
+const playDog = document.getElementById("dogSound");
+const playCat = document.getElementById("catSound");
+const playMouse = document.getElementById("mouseSound");
+
 //SOUNDS
-let playDJ = function () {
+playDJ.onclick = function () {
   document.getElementById("djAudio").play();
 };
-let playDog = function () {
+
+playDog.onclick = function () {
   document.getElementById("dogAudio").play();
 };
-let playCat = function () {
+
+playCat.onclick = function () {
   document.getElementById("catAudio").play();
 };
-let playMouse = function () {
+
+playMouse.onclick = function () {
   document.getElementById("mouseAudio").play();
 };
 
