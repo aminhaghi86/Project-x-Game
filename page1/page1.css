@@ -5,7 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Press Start 2P", cursive;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .container {
@@ -13,8 +13,8 @@ body {
     align-items: flex-end;
     justify-content: flex-end;
     background-color: rgb(0, 0, 0);
-    height: 70vh;
-    width: 75vw;
+    height: 100vh;
+    width: 100vw;
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,13 +60,16 @@ body {
   
   .cat-container {
     width: 50%;
-    z-index: 2;
+    
   }
   
   #catPicture {
     visibility: hidden;
     position: absolute;
     left: 7.5rem;
+    z-index: 2;
+    background-color: none;
+    object-fit: cover;
   }
   
   #catPicture.visible {
@@ -104,11 +107,11 @@ body {
     padding: .5rem;
     text-align: center;
     background-color: white;
-    color: black;
+
     width: 80%;
   }
   .bossChatbox p{
-   color: white;
+   color: black;
   }
   
   .boss-dog-container {
@@ -117,10 +120,10 @@ body {
   }
   .bossdog-img {
     object-fit: cover;
+    z-index: 2;
   }
   /*  */
   #chatBox {
-    background-color: black;
     width: 100vh;
     margin-top: 1rem;
     color: white;
@@ -147,12 +150,16 @@ body {
   }
   
   .chatBox-container {
+    position: absolute;
+    background-color: none;
+    top: 20%;
     height: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-bottom: 100px;
+    z-index: 2;
   }
   #chatBoxBtns {
     display: none;
