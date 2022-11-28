@@ -11,6 +11,7 @@ const firebaseConfig = {
 
 const list = document.querySelector(".scoreboard ol");
 const playerList = document.getElementById("scoreboard-player");
+const playBtn = document.getElementById("playAgain");
 const app = firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
@@ -55,4 +56,10 @@ const renderPosts = (scores) => {
   const playerEl = document.createElement("div");
   playerEl.innerHTML = `<h2 class="scoreboard-player">Score:${getName()} Username:${getScore()}</h2>`;
   playerList.append(playerEl);
+};
+
+playBtn.onclick = () => {
+  window.localStorage.removeItem("userName");
+  window.localStorage.removeItem("score");
+  window.location.href = "../index.html";
 };
