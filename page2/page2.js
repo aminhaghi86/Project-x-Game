@@ -7,7 +7,7 @@ const wrongAnswer = document.getElementById("wrong-answer");
 const exitGame = document.getElementById("exit-game");
 
 // variables
-let randomNum = Math.floor(Math.random() * 3);
+let randomNum = Math.floor(Math.random() * 2)+1;
 
 // variables
 
@@ -16,16 +16,17 @@ let randomNum = Math.floor(Math.random() * 3);
 doors.forEach((door) => {
   door.onclick = () => {
     doorSound.play();
+    door.classList.add('doors-anim')
     setTimeout(() => {
       window.location.href = `../game${randomNum}/game${randomNum}.html`;
     }, 1500);
+    
   };
 });
 // door opening sound
 
 const falseDoor = () => {
   const selectDoor = doors[randomNum];
-  console.log(selectDoor);
   selectDoor.src = `../images/door-stage-2.png`;
   selectDoor.onclick = () => {
     doorSound.play();
@@ -41,3 +42,5 @@ falseDoor();
 exitGame.onclick = () => {
   window.location.href = "../page4/page4.html";
 };
+
+
