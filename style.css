@@ -63,3 +63,16 @@ body {
   background-color: greenyellow;
   letter-spacing: 8px;
 }
+
+.funnycat {
+  position: absolute;
+  top: 5%;
+  right: 45%;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+.inactive-funny {
+  display: none;
+  opacity: 0;
+}
