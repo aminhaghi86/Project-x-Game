@@ -152,7 +152,7 @@ body {
   .chatBox-container {
     position: absolute;
     background-color: none;
-    top: 20%;
+    top: 7%;
     height: 25vh;
     display: flex;
     flex-direction: column;
