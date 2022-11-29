@@ -1,4 +1,4 @@
-import { getName, getScore } from "../../store.js";
+import { getName, getScore, setScore } from "../store.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyASTKEqpfcsrVt-YYuvYgj-BrfEAFTeFwM",
@@ -62,13 +62,12 @@ const renderPosts = (scores) => {
 };
 
 playBtn.onclick = () => {
-  window.localStorage.removeItem("userName");
-  window.localStorage.removeItem("score");
+  setScore(0);
   window.location.href = "../page1/page1.html";
 };
 
 resetBtn.onclick = () => {
-  window.localStorage.removeItem("userName");
   window.localStorage.removeItem("score");
+  window.localStorage.removeItem("UserName");
   window.location.href = "../index.html";
 };
