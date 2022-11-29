@@ -1,5 +1,5 @@
 "use strict";
-import { setName, setScore } from "../store.js";
+import { setName, setScore } from "./store.js";
 
 const form = document.getElementById("userInfo");
 const noBtn = document.getElementById("noBtn");
