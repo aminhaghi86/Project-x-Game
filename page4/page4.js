@@ -14,6 +14,7 @@ const playerList = document.getElementById("scoreboard-player");
 const playBtn = document.getElementById("playAgainYes");
 const resetBtn = document.getElementById("playAgainNo");
 const app = firebase.initializeApp(firebaseConfig);
+const now = new Date();
 
 const db = firebase.firestore();
 
@@ -55,8 +56,13 @@ const renderPosts = (scores) => {
   }
 
   const playerEl = document.createElement("div");
+  
+  
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const date = now.getDate();
 
-  playerEl.innerHTML = `<h2 class="scoreboard-player">Username:${getName()}<br><br>Score:${getScore()}</h2>`;
+  playerEl.innerHTML = `<h2 class="scoreboard-player">Username:${getName()}<br><br>Score:${getScore()}<br><br>${now.getFullYear()}.${now.getMonth()}.${now.getDate()}</h2>`;
   playerList.append(playerEl);
   document.querySelector(".scoreboard-player").style.textAlign = "center";
 };
