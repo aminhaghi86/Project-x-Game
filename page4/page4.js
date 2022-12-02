@@ -56,11 +56,6 @@ const renderPosts = (scores) => {
   }
 
   const playerEl = document.createElement("div");
-  
-  
-  const year = now.getFullYear();
-  const month = now.getMonth();
-  const date = now.getDate();
 
   playerEl.innerHTML = `<h2 class="scoreboard-player">Username:${getName()}<br><br>Score:${getScore()}<br><br>${now.getFullYear()}.${now.getMonth()}.${now.getDate()}</h2>`;
   playerList.append(playerEl);
