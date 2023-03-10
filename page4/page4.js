@@ -1,3 +1,13 @@
+
+const btnAgain =document.getElementById('playAgain') ;
+
+btnAgain.onclick = ()=>{
+    console.log('hi');
+    setTimeout(() => {
+        window.location.href = '../page2/page2.html'
+    }, 500);
+}
+
 import { getName, getScore, setScore } from "../store.js";
 
 const firebaseConfig = {
@@ -71,3 +81,4 @@ resetBtn.onclick = () => {
   window.localStorage.removeItem("UserName");
   window.location.href = "../index.html";
 };
+
