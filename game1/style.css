@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  background-image: url(./images/casino.png);
+  background-size: cover;
+  font-size: 11px;
+}
+
+.audioContainer {
+  position: fixed;
+  top: 0px;
+  left: 10vw;
+  width: 40%;
+}
+
+.audioContainer-chat {
+  border-radius: 10px;
+  width: 10rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: azure;
+}
+
+.imgAudio {
+  width: 10rem;
+}
+
+.header-container {
+  text-align: center;
+  color: aliceblue;
+  font-size: 1rem;
+  margin-top: 4rem;
+}
+.header-container h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: aqua;
+}
+
+.header-container h3 {
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(195, 197, 182);
+}
+
+.header-container span {
+  text-align: center;
+  color: rgb(225, 255, 0);
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.rules {
+  margin: 2rem 2rem 0rem;
+  font-size: 0.7rem;
+  padding: 3rem;
+  background-color: rgba(23, 33, 74, 0.911);
+  border: double yellow 8px;
+}
+
+.rules span {
+  color: rgb(221, 83, 83);
+  animation: blinker 2s linear infinite;
+}
+.container {
+  border: groove yellow 8px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgb(69, 69, 69);
+  margin: -1rem 4rem;
+}
+
+.titlesContainer {
+  text-align: center;
+  width: 80%;
+  border: dotted salmon 3px;
+  background-color: rgba(230, 173, 173, 0.139);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+img {
+  width: 90px;
+  margin: auto;
+}
+.choiceBtn {
+  line-height: 30px;
+  width: 150px;
+}
+
+.gameDiv {
+  border-radius: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  width: 60vw;
+  background-color: rgba(165, 173, 171, 0.722);
+  text-align: center;
+  margin: 1rem;
+}
+
+.gameText {
+  margin: 1rem 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.buttonContainer:hover {
+  animation-name: btnhover;
+  animation-duration: 2s;
+  transition: 1s;
+}
+
+@keyframes btnhover {
+  0% {
+    left: 0px;
+    top: 0px;
+    transition: 2s;
+    border-radius: 50px;
+  }
+  25% {
+    transition: 2s;
+    border-radius: 100px;
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  100% {
+    transition: 1s;
+    border-radius: 60px;
+    background-color: rgb(213, 213, 206);
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.choiceBtn {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.choiceBtn:hover {
+  transition: 0.5s;
+  background-color: yellow;
+}
+
+.choiceBtn:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(213, 5, 5);
+}
+
+#playerText {
+  color: rgb(82, 224, 60);
+}
+#computerText {
+  color: rgb(255, 9, 9);
+}
+
+#resultText {
+  color: yellow;
+  font-size: 1.5rem;
+  animation: blinker 2s linear;
+  animation-iteration-count: 3;
+  animation-delay: 1s;
+}
+
+/* .animate__animated {
+  margin: auto;
+}
+
+.animate__wobble {
+  margin: auto;
+} */

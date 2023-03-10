@@ -8,40 +8,63 @@
     <title>Heaven</title>
   </head>
   <body>
-<!-- start of scoreboard -->
+    <!-- start of scoreboard -->
     <section class="container">
-      <h1 class="content-title">Top candidates</h1>
+      <h1 class="content-title">TOP CANDIDATES</h1>
       <div class="scoreboard-container">
-          <div class="scoreboard">
+        <div class="scoreboard">
           <ol>
-              <li id="top-candidate">Mr Cool</li>
+            <!-- <li id="top-candidate">Mr Cool</li>
               <li>CoolCat2000</li>
-              <li>RickTheCatstley</li>
+              <li>RickTheCatstley</li> -->
           </ol>
+          <div id="scoreboard-player"></div>
+        </div>
+        <div class="press-buttons" id="press-buttons">
+          <button id="playAgainYes" class="btn-playagain">Play again!</button>
+          <button id="playAgainNo" class="btn-playagain">
+            RESTART - new player!
+          </button>
+        </div>
       </div>
+
       <button class="btn-playagain" id="playAgain">Play again!</button>
       </div>
-<!-- end of scoreboard -->
 
-<!-- start of cat containers -->
-        <div class="container-angelcat">
-        <img src="../images/angelcat.gif" class="content-angelcat"/>
+
+      <!-- end of scoreboard -->
+
+
+      <!-- start of cat containers -->
+      <div class="container-angelcat">
+        <img src="../images/angelcat.gif" class="content-angelcat" />
         <div class="content-angelcat-chatbox">
-        <p id="angelcat-text" class="chatbox-text">Oh my young meowdawan, you did aMEOWzing but this time it was not enough. Would you like to try again?</p>
+          <p id="angelcat-text" class="chatbox-text">
+            Oh my young meowdawan, you did aMEOWzing but this time it was not
+            enough. Would you like to try again?
+          </p>
         </div>
       </div>
-    
-        <div class="container-cat">
-        <img src="../images/maincat-inactive.png" class="content-cat"/>
+
+      <div class="container-cat">
+        <img src="../images/maincat-inactive.png" class="content-cat" />
         <div class="content-cat-chatbox">
-          <p id="cat-text" class="chatbox-text">This is a CATastrophy! Please hire me! </p>
+          <p id="cat-text" class="chatbox-text">
+            This is a CATastrophy! Please hire me!
+          </p>
         </div>
       </div>
-      </div>
-<!-- end of cat containers -->
+      <!-- end of cat containers -->
     </section>
-<!-- background clouds-->
+    <!-- background clouds-->
+
     <img src="../images/clouds.gif" class="background-clouds" />
+
     <script src="./page4.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+    <script src="./page4.js" type="module"></script>
+
   </body>
 </html>

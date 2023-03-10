@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./page1.css" />
+    <title>Animations</title>
+  </head>
+  <body>
+    <!-- <audio
+      id="player"
+      src="../Game-Sounds/OpeningScene.mp3"
+      type="audio/mp3"
+    ></audio> -->
+    <section class="container">
+      <img
+        class="background-img"
+        src="../images/officeBackhground.jpeg"
+        alt=""
+      />
+      <div class="cat-container">
+        <img id="catPicture" src="../images/maincat-inactive.png" alt="cat" />
+        <img class="smalldog" src="../images/sadDog.png" alt="small dog" />
+        <img class="cat-img" src="../images/maincat-inactive.png" alt="cat" />
+      </div>
+      <div class="boss-dog-container">
+        <div class="bossChatbox inactive" id="bossChatbox">
+          <p>
+            Are you kitten me?!<br />
+            Believe in yourself!<br />
+            Say "yes"!
+          </p>
+        </div>
+        <img
+          class="bossdog-img"
+          src="../images/boss-dog__inactive.png"
+          alt="bossdog"
+        />
+      </div>
+    </section>
+    <section class="chatBox-container">
+      <div id="chatBox">
+        <div id="chatBoxText">
+          <p id="p1"></p>
+          <div id="chatBoxBtns">
+            <a id="yesBtn" onclick="playYes()"> Yes</a>
+            <!-- <button id="yesBtn">Yes</button> -->
+
+            <!-- <audio
+              id="audioYes"
+              src="../Game-Sounds/Positive-correct-game-sound.wav"
+            ></audio> -->
+            <button onclick="revealBossChatbox()" id="noBtn">No</button>
+            <audio id="audioNo" src="../Game-Sounds/noBtn.wav"></audio>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./page1.js"></script>
+  </body>
+</html>

@@ -25,8 +25,19 @@ body {
   left: 20vw;
   transform: translate(-50%, -50%);
 }
+
+.container-angelcat {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 57%;
+  left: 10%;
+}
 .content-angelcat {
   margin: 1rem;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .content-angelcat-chatbox {
@@ -53,6 +64,9 @@ body {
   left: 50vw;
   color: rgb(255, 22, 22);
   transform: translate(-50%, -50%);
+  z-index: 1;
+  text-decoration: underline;
+  padding-bottom: 8rem;
 }
 .scoreboard-container {
   display: flex;
@@ -62,17 +76,30 @@ body {
   top: 40vh;
   left: 50vw;
   transform: translate(-50%, -50%);
+  margin-top: 30px;
 }
 .scoreboard {
   border: 2px solid red;
   color: rgb(208, 54, 54);
   background-color: black;
-  padding: 100px;
+  padding: 50px;
   border-radius: 10px;
+  opacity: 0.8;
+}
+
+.scoreboard ol div {
+  color: white;
+  letter-spacing: 2px;
+  line-height: 1.3rem;
 }
 
 .scoreboard li {
   padding: 0.5rem;
+}
+
+.scoreboard-player {
+  padding-top: 2rem;
+  color: red;
 }
 
 #top-candidate {
@@ -80,14 +107,26 @@ body {
   background-color: aliceblue;
 }
 
+.press-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .btn-playagain {
   font-family: "Press Start 2P", cursive;
   color: red;
-  margin: 1rem 5rem;
-  padding: 0.8rem;
+  margin: 1rem;
+  padding: 1rem;
   border-color: red;
   border-radius: 0.5rem;
+
   transition: all .5s ease-in;
+
+  font-size: 0.8rem;
+
 }
 
 .btn-playagain:hover {
@@ -95,12 +134,15 @@ body {
   color: rgb(255, 255, 255);
   background-color: red;
   transition: 0.5s;
-  margin: 1rem 5rem;
   padding: 0.8rem;
   border-color: red;
   border-radius: 0.5rem;
+
   transform: translateY(.2rem);
   letter-spacing: 3px;
+
+  font-size: 0.8rem;
+
 }
 
 .btn-playagain:active {
@@ -112,9 +154,8 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 60vh;
-  left: 80vw;
-  transform: translate(-50%, -50%);
+  top: 33%;
+  right: 2%;
 }
 
 .content-cat-chatbox {
